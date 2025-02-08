@@ -135,6 +135,8 @@ namespace AccountService_API
             builder.Services.AddScoped<IJWTAuthentication, JWTAuthentication>();
             builder.Services.AddScoped<IAccountRepository, AccountRepository>();
             builder.Services.AddScoped<IAccountService, AccountService>();
+            builder.Services.AddScoped<IRoleRepository, RoleRepository>();
+            builder.Services.AddScoped<IRoleService, RoleService>();
             builder.Services.AddRouting(option => option.LowercaseUrls = true);
             builder.Services.AddAuthentication(x =>
             {

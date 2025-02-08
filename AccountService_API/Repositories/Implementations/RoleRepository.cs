@@ -15,12 +15,27 @@ namespace AccountService_API.Repositories.Implementations
             throw new NotImplementedException();
         }
 
+        public Task<Role> FindByNameAsync(string name)
+        {
+            throw new NotImplementedException();
+        }
+
         public Task<IEnumerable<Role>> GetAllAsync(CancellationToken cancellationToken = default)
         {
             throw new NotImplementedException();
         }
 
         public Task<IEnumerable<Role>> GetByIdAsync(string id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<Role> GetModelByIdAsync(string id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> RoleExistsAsync(string roleName)
         {
             throw new NotImplementedException();
         }
