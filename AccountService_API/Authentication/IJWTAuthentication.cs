@@ -5,7 +5,7 @@ namespace AccountService_API.Authentication
 {
     public interface IJWTAuthentication
     {
-        string GenerateToken(UserDto model);
+        string GenerateToken(ApplicationUserDto model);
         string GenerateRefreshToken();
         ClaimsPrincipal GetPrincipalFromExpiredToken(string token);
     }

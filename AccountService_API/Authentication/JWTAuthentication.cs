@@ -28,14 +28,14 @@ namespace AccountService_API.Authentication
             }
         }
 
-        public string GenerateToken(UserDto model)
+        public string GenerateToken(ApplicationUserDto model)
         {
 
             var tokenKey = Encoding.UTF8.GetBytes(_key);
             var claims = new List<Claim>();
             claims.Add(new Claim(ClaimTypes.NameIdentifier, model.UserId.ToString()));
             claims.Add(new Claim(ClaimTypes.Email, model.Email));
-            claims.Add(new Claim(ClaimTypes.Role, model.RoleName));   
+            claims.Add(new Claim(ClaimTypes.Role, model.RoleId));   
 
             var tokenDescriptor = new SecurityTokenDescriptor
             {

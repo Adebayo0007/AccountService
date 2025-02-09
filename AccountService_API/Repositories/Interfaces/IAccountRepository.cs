@@ -7,7 +7,8 @@ namespace AccountService_API.Repositories.Interfaces
         Task<User> GetModelByEmailAsync(string email, int appNumber);
         Task<User> GetModelByEmailAsync(string email);
         Task<User> GetModelByIdAsync(string id);
-        Task<bool> Exist(string email, int appNumber);
+        Task<bool> Exist(string email);
+        Task<User> FindUserAsync(string name, string password);
         Task<IEnumerable<User>> DeactivatedUsers(CancellationToken cancellationToken = default);
         Task<IEnumerable<User>> GetAllUnVerifiedUsers(CancellationToken cancellationToken = default);
         Task<IEnumerable<User>> GetAllCustomers(CancellationToken cancellationToken = default);

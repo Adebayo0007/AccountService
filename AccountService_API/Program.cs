@@ -137,6 +137,7 @@ namespace AccountService_API
             builder.Services.AddScoped<IAccountService, AccountService>();
             builder.Services.AddScoped<IRoleRepository, RoleRepository>();
             builder.Services.AddScoped<IRoleService, RoleService>();
+            builder.Services.AddScoped<IEmailSender, EmailSender>();
             builder.Services.AddRouting(option => option.LowercaseUrls = true);
             builder.Services.AddAuthentication(x =>
             {
